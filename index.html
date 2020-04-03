@@ -62,6 +62,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vue-cli-plugin开发" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/03/vue-cli-plugin开发/" class="article-date">
+  <time datetime="2020-04-03T14:31:45.000Z" itemprop="datePublished">2020-04-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/03/vue-cli-plugin开发/">vue-cli-plugin</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="vue-cli3插件内含文件"><a href="#vue-cli3插件内含文件" class="headerlink" title="vue-cli3插件内含文件"></a>vue-cli3插件内含文件</h2><p>一个典型的 CLI 插件的目录结构看起来是这样的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── README.md</span><br><span class="line">├── generator.js  # generator (可选)</span><br><span class="line">├── prompts.js    # prompt 文件 (可选)</span><br><span class="line">├── index.js      # service 插件</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
+
+<h5 id="Service-插件"><a href="#Service-插件" class="headerlink" title="Service 插件"></a>Service 插件</h5><ul>
+<li>可以导出一个 server 命令，添加给 vue-cli-service。eg:vue-cli-service testcommand。</li>
+<li>执行 vue-cli-service 命令的时候，可以改变 webpack 配置，去做对应的文件处理。</li>
+<li>接收一个从 vue.config.js 文件中配置的参数，增加可配置性。</li>
+</ul>
+<h5 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h5><ul>
+<li>generator 可以向 package.json 注入额外的依赖或字段。可用于通过 preset 生成项目的时候。</li>
+<li>也可以向项目中添加文件。可用于，往项目中添加固定的模板代码的时候。</li>
+</ul>
+<h5 id="Prompts"><a href="#Prompts" class="headerlink" title="Prompts"></a>Prompts</h5><ul>
+<li>插件的对话框，可以提供参数的添加。这些参数会作为选项被传递给插件的 generator。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://tracy-chang.github.io/2020/04/03/vue-cli-plugin开发/" data-id="ck8kayl9k00058as6ji9t0bo1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vue-cli3-setup" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/28/vue-cli3-setup/" class="article-date">
@@ -84,13 +135,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="browserslistrc"><a href="#browserslistrc" class="headerlink" title=".browserslistrc"></a>.browserslistrc</h2><p>用来指定项目的目标浏览器的范围，会被babel转译。<br>指定方法：<a href="https://github.com/browserslist/browserslist" target="_blank" rel="noopener">https://github.com/browserslist/browserslist</a></p>
-<h2 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h2><p>在babel.config.js中配置babel的配置项，babel封装在vue/cli-plugin-babel中。<br>vue/cli-plugin-babel的配置方法：<a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app" target="_blank" rel="noopener">https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app</a><br>babel的配置方法：<a href="https://www.babeljs.cn/docs/" target="_blank" rel="noopener">https://www.babeljs.cn/docs/</a></p>
-<h2 id="eslint"><a href="#eslint" class="headerlink" title="eslint"></a>eslint</h2>
+        <h2 id="browserslistrc"><a href="#browserslistrc" class="headerlink" title=".browserslistrc"></a>.browserslistrc</h2><h5 id="introduction："><a href="#introduction：" class="headerlink" title="introduction："></a>introduction：</h5><ul>
+<li>用来指定项目的目标浏览器的范围，会被babel转译。</li>
+<li>指定方法：<a href="https://github.com/browserslist/browserslist" target="_blank" rel="noopener">https://github.com/browserslist/browserslist</a></li>
+</ul>
+<h2 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h2><h5 id="introduction：-1"><a href="#introduction：-1" class="headerlink" title="introduction："></a>introduction：</h5><ul>
+<li>在babel.config.js中配置babel的配置项，babel封装在vue/cli-plugin-babel中。</li>
+<li>vue/cli-plugin-babel的配置方法：<a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app" target="_blank" rel="noopener">https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app</a></li>
+<li>babel的配置方法：<a href="https://www.babeljs.cn/docs/" target="_blank" rel="noopener">https://www.babeljs.cn/docs/</a></li>
+</ul>
+<h2 id="eslint"><a href="#eslint" class="headerlink" title="eslint"></a>eslint</h2><h5 id="introduction：-2"><a href="#introduction：-2" class="headerlink" title="introduction："></a>introduction：</h5><ul>
+<li>配置自带规则加插件规则，以及vscode插件，对项目中的代码进行规则校验。</li>
+<li>eslint的规则：<a href="https://cn.eslint.org/" target="_blank" rel="noopener">https://cn.eslint.org/</a></li>
+<li>Vue + Vetur + ESlint + Prettier | ESlint + Prettier：简单的思路就是通过 Vetur 来做 Vue 代码风格的检查，比如template，style，Vetur 搭配 Eslint 检测 js 部分的代码风格， 调用 Prettier 进行代码风格的修正统一。</li>
+<li>你可以通过在项目根目录创建一个 .eslintignore 文件告诉 ESLint 去忽略特定的文件和目录。</li>
+<li>在安装之后，@vue/cli-service 也会安装 yorkie，它会让你在 package.json 的 gitHooks 字段中方便地指定 Git hook，可以在commit的时候执行eslint命令等。</li>
+</ul>
+<h5 id="Vscode-编辑器代码规范配置方案："><a href="#Vscode-编辑器代码规范配置方案：" class="headerlink" title="Vscode 编辑器代码规范配置方案："></a>Vscode 编辑器代码规范配置方案：</h5><ul>
+<li>更新项目，并重新执行 npm i</li>
+<li>安装 Vscode 插件： editorconfig, Vetur, Eslint, Prettier</li>
+<li>打开项目的设置： Ctrl + , (Mac : Cmd + ,) ，选择工作区设置,打开 setting.json 文件，把下面插件相关的配置拷贝入文件，并保存<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"eslint.validate"</span>: [&#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"html"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"vue"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"javascript"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"javascriptreact"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"editor.formatOnSave"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="string">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">"vetur.validation.template"</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/" data-id="ck8bhcicj0003qls6naeep44x" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/" data-id="ck8kayl9j00048as64dhfznvv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2019/11/29/module/" data-id="ck8bhcich0002qls6udicoboq" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2019/11/29/module/" data-id="ck8kayl9h00038as61l4gkfwh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -170,7 +240,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2019/11/03/finance-init/" data-id="ck8bhcica0000qls6dxyh1coi" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2019/11/03/finance-init/" data-id="ck8kayl9900008as6uo2a7mp7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -203,12 +273,11 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>&emsp;&emsp;距离上一次已经过了一个多月了，flag果然不好实现。近期学习热情有点高涨，主要是要是不连续起来，前面看的东西，太容易忘了，下次看回忆部分就得很久了。<br>&emsp;&emsp;cli3看了挺久了，这两周终于草草过了一遍。<br>&emsp;&emsp;cli2和cli3的区别<br>&emsp;&emsp;cli2基本就是对webpack配置的preset，创建vue项目的时候，把复杂的webpack的基本配置已经做好了，剩下的个性化配置，就根据项目情况做一些特殊配置就好。比如：cli2会生成两个配置目录，config目录，用来配置项目的一些资源路径，项目端口号之类的；build目录，webpack的常用单页配置，拆分开发环境和生产环境，抽离两个环境公共配置，工具函数等等，整体来讲，比较容易理解。<br>&emsp;&emsp;cli3，本质上来讲，是对webpack的上一层封装。新建项目后，不在能看到webpack的相关的配置文件，只有项目文件。配置文件全部以npm包的形式组织到node_modules里面了。核心的两个插件@vue/cli + @vue/cli-service，一个是项目生产插件，一个是启动服务器插件，暴露出来的提供给使用者的可配选项在vue.config.js文件中。包括环境变量以及webpack插件的通用配置。封装了更有好的项目解决方案。文档里面的内容就不详细些了，大概列一下有哪些东西：vue自带插件以及自编插件方式、preset–预设置，项目启动的时候，安装之前保存的配置、build的时候，对针对目标浏览器的配置、静态资源输出的配置方式、css相关的预处理、webpack暴露出来的各种配置接口、通过不同模式来使用不同的环境变量、构建以及部署的解决方案等等。里面有很多不错的工程解决方案，一方面可以好好使用，另一方面也可以借鉴里面的解决思路，对以后面对类似的问题提供思路。<br>&emsp;&emsp;cli3的使用总结到这里，讨论一些深入的问题。后续需要看插件的开发方式，以及cli3的插件的组织方式。以及下一层的webpack的插件的开发方式以及插件的组织方式，猜测他们一定有共同点。需要的基础知识，包括node的常规知识，npm包的使用规则等。这些东西都是目前欠缺的。<br>&emsp;&emsp;cli3里面还有很多关于不同方向的处理方案，这些都还是盲点。简单的处理方案已经更深入的工程方面的解决方案的优劣等等。</p>
-<p>ps：我太难了。。。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2019/11/03/vue cli2 2 vue cli3/" data-id="ck8bhcick0004qls65750k9rl" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2019/11/03/vue cli2 2 vue cli3/" data-id="ck8kayl9e00018as6inz6na1r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -249,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2019/09/15/first/" data-id="ck8bhcice0001qls6bfg93s7i" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2019/09/15/first/" data-id="ck8kayl9g00028as6upiyzffu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -277,7 +346,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
     </div>
   </div>
 
@@ -288,6 +357,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/04/03/vue-cli-plugin开发/">vue-cli-plugin</a>
+          </li>
         
           <li>
             <a href="/2020/03/28/vue-cli3-setup/">vue-cli3-setup</a>
@@ -303,10 +376,6 @@
         
           <li>
             <a href="/2019/11/03/vue cli2 2 vue cli3/">从 vue cli2 到 vue cli3</a>
-          </li>
-        
-          <li>
-            <a href="/2019/09/15/first/">翠西的第一篇blog</a>
           </li>
         
       </ul>
