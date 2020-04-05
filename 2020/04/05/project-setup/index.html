@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>project-setup | 翠西的bolg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content=".browserslistrc / .env / .env.dev / .env.production / .env.test参考：https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/ .editorconfig EditorConfig 的配置文件 EditorConfig 有助于维护跨多个编辑器和IDE从事同一项目的多个开发人员的一致">
+<meta property="og:type" content="article">
+<meta property="og:title" content="project-setup">
+<meta property="og:url" content="https://tracy-chang.github.io/2020/04/05/project-setup/index.html">
+<meta property="og:site_name" content="翠西的bolg">
+<meta property="og:description" content=".browserslistrc / .env / .env.dev / .env.production / .env.test参考：https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/ .editorconfig EditorConfig 的配置文件 EditorConfig 有助于维护跨多个编辑器和IDE从事同一项目的多个开发人员的一致">
+<meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2020-04-05T15:01:47.952Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="project-setup">
+<meta name="twitter:description" content=".browserslistrc / .env / .env.dev / .env.production / .env.test参考：https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/ .editorconfig EditorConfig 的配置文件 EditorConfig 有助于维护跨多个编辑器和IDE从事同一项目的多个开发人员的一致">
+  
+    <link rel="alternate" href="/atom.xml" title="翠西的bolg" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">翠西的bolg</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://tracy-chang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-project-setup" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/05/project-setup/" class="article-date">
+  <time datetime="2020-04-05T10:19:50.000Z" itemprop="datePublished">2020-04-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      project-setup
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="browserslistrc-env-env-dev-env-production-env-test"><a href="#browserslistrc-env-env-dev-env-production-env-test" class="headerlink" title=".browserslistrc / .env / .env.dev / .env.production / .env.test"></a>.browserslistrc / .env / .env.dev / .env.production / .env.test</h3><p>参考：<a href="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/">https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/</a></p>
+<h3 id="editorconfig"><a href="#editorconfig" class="headerlink" title=".editorconfig"></a>.editorconfig</h3><ul>
+<li>EditorConfig 的配置文件</li>
+<li>EditorConfig 有助于维护跨多个编辑器和IDE从事同一项目的多个开发人员的一致编码风格。统一文本编辑器的风格。</li>
+<li>EditorConfig 前端常用 IDE（sublime，atom，vscode） 没有内置，需要安装对应插件，已统一代码风格。</li>
+<li>EditorConfig 的配置方式和适用说明：<a href="https://editorconfig.org/" target="_blank" rel="noopener">https://editorconfig.org/</a></li>
+</ul>
+<h3 id="gitignore-gitattributes"><a href="#gitignore-gitattributes" class="headerlink" title=".gitignore / .gitattributes"></a>.gitignore / .gitattributes</h3><ul>
+<li>不上传git地址的文件</li>
+<li>gitattributes 上传git的时候，统一各个系统和 IDE 的各种格式，例如行结尾时的回车。<a href="https://git-scm.com/docs/gitattributes" target="_blank" rel="noopener">https://git-scm.com/docs/gitattributes</a></li>
+</ul>
+<h3 id="npmignore"><a href="#npmignore" class="headerlink" title=".npmignore"></a>.npmignore</h3><ul>
+<li>npm 发布包的时候，会忽略文件里面的内容，优先级大于 .gitignore</li>
+</ul>
+<h3 id="npmrc"><a href="#npmrc" class="headerlink" title=".npmrc"></a>.npmrc</h3><ul>
+<li>用来配置存储 npm 的配置内容的，详细配置地址：<a href="https://docs.npmjs.com/using-npm/config" target="_blank" rel="noopener">https://docs.npmjs.com/using-npm/config</a></li>
+</ul>
+<h3 id="eslintrc-eslintignore"><a href="#eslintrc-eslintignore" class="headerlink" title=".eslintrc / .eslintignore"></a>.eslintrc / .eslintignore</h3><p>参考：<a href="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/">https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/</a></p>
+<h3 id="babelrc-json-babel-config-js"><a href="#babelrc-json-babel-config-js" class="headerlink" title=".babelrc.json / babel.config.js"></a>.babelrc.json / babel.config.js</h3><p>参考：<a href="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/">https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/</a></p>
+<h3 id="postcssrc"><a href="#postcssrc" class="headerlink" title=".postcssrc"></a>.postcssrc</h3><h3 id="postcss-config-js"><a href="#postcss-config-js" class="headerlink" title="postcss.config.js"></a>postcss.config.js</h3><h3 id="jest-config-js"><a href="#jest-config-js" class="headerlink" title="jest.config.js"></a>jest.config.js</h3><h3 id="changelog-config-js"><a href="#changelog-config-js" class="headerlink" title="changelog.config.js"></a>changelog.config.js</h3><h3 id="jsconfig-json"><a href="#jsconfig-json" class="headerlink" title="jsconfig.json"></a>jsconfig.json</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://tracy-chang.github.io/2020/04/05/project-setup/" data-id="ck8n6fqqb00033ls6sziyfpg1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/05/vue-preset/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">vue-preset</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/05/project-setup/">project-setup</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/vue-preset/">vue-preset</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/npm-pkg/">npm-pkg</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/04/node-cli/">node-cli</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/03/vue-cli-plugin开发/">vue-cli-plugin</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Tracy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

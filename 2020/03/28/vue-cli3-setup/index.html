@@ -7,17 +7,17 @@
   
   <title>vue-cli3-setup | 翠西的bolg</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content=".browserslistrcintroduction： 用来指定项目的目标浏览器的范围，会被babel转译。 指定方法：https://github.com/browserslist/browserslist  babelintroduction： 在babel.config.js中配置babel的配置项，babel封装在vue/cli-plugin-babel中。 vue/cli-plugin">
+  <meta name="description" content=".browserslistrcintroduction： 用来指定项目的目标浏览器的范围，会被babel转译。 指定方法：https://github.com/browserslist/browserslist  babelintroduction： 配置方式：babel.config.js 或者 .babelrc.json 在babel.config.js中配置babel的配置项，babel封装">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue-cli3-setup">
 <meta property="og:url" content="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/index.html">
 <meta property="og:site_name" content="翠西的bolg">
-<meta property="og:description" content=".browserslistrcintroduction： 用来指定项目的目标浏览器的范围，会被babel转译。 指定方法：https://github.com/browserslist/browserslist  babelintroduction： 在babel.config.js中配置babel的配置项，babel封装在vue/cli-plugin-babel中。 vue/cli-plugin">
+<meta property="og:description" content=".browserslistrcintroduction： 用来指定项目的目标浏览器的范围，会被babel转译。 指定方法：https://github.com/browserslist/browserslist  babelintroduction： 配置方式：babel.config.js 或者 .babelrc.json 在babel.config.js中配置babel的配置项，babel封装">
 <meta property="og:locale" content="cn">
-<meta property="og:updated_time" content="2020-04-03T14:47:04.724Z">
+<meta property="og:updated_time" content="2020-04-05T10:53:38.284Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue-cli3-setup">
-<meta name="twitter:description" content=".browserslistrcintroduction： 用来指定项目的目标浏览器的范围，会被babel转译。 指定方法：https://github.com/browserslist/browserslist  babelintroduction： 在babel.config.js中配置babel的配置项，babel封装在vue/cli-plugin-babel中。 vue/cli-plugin">
+<meta name="twitter:description" content=".browserslistrcintroduction： 用来指定项目的目标浏览器的范围，会被babel转译。 指定方法：https://github.com/browserslist/browserslist  babelintroduction： 配置方式：babel.config.js 或者 .babelrc.json 在babel.config.js中配置babel的配置项，babel封装">
   
     <link rel="alternate" href="/atom.xml" title="翠西的bolg" type="application/atom+xml">
   
@@ -91,27 +91,32 @@
 <li>指定方法：<a href="https://github.com/browserslist/browserslist" target="_blank" rel="noopener">https://github.com/browserslist/browserslist</a></li>
 </ul>
 <h2 id="babel"><a href="#babel" class="headerlink" title="babel"></a>babel</h2><h5 id="introduction：-1"><a href="#introduction：-1" class="headerlink" title="introduction："></a>introduction：</h5><ul>
+<li>配置方式：babel.config.js 或者 .babelrc.json</li>
 <li>在babel.config.js中配置babel的配置项，babel封装在vue/cli-plugin-babel中。</li>
 <li>vue/cli-plugin-babel的配置方法：<a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app" target="_blank" rel="noopener">https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/babel-preset-app</a></li>
 <li>babel的配置方法：<a href="https://www.babeljs.cn/docs/" target="_blank" rel="noopener">https://www.babeljs.cn/docs/</a></li>
 </ul>
 <h2 id="eslint"><a href="#eslint" class="headerlink" title="eslint"></a>eslint</h2><h5 id="introduction：-2"><a href="#introduction：-2" class="headerlink" title="introduction："></a>introduction：</h5><ul>
+<li>配置方式 .eslintrc.*</li>
+<li>你可以通过在项目根目录创建一个 .eslintignore 文件告诉 ESLint 去忽略特定的文件和目录。</li>
 <li>配置自带规则加插件规则，以及vscode插件，对项目中的代码进行规则校验。</li>
 <li>eslint的规则：<a href="https://cn.eslint.org/" target="_blank" rel="noopener">https://cn.eslint.org/</a></li>
 <li>Vue + Vetur + ESlint + Prettier | ESlint + Prettier：简单的思路就是通过 Vetur 来做 Vue 代码风格的检查，比如template，style，Vetur 搭配 Eslint 检测 js 部分的代码风格， 调用 Prettier 进行代码风格的修正统一。</li>
-<li>你可以通过在项目根目录创建一个 .eslintignore 文件告诉 ESLint 去忽略特定的文件和目录。</li>
 <li>在安装之后，@vue/cli-service 也会安装 yorkie，它会让你在 package.json 的 gitHooks 字段中方便地指定 Git hook，可以在commit的时候执行eslint命令等。</li>
 </ul>
 <h5 id="Vscode-编辑器代码规范配置方案："><a href="#Vscode-编辑器代码规范配置方案：" class="headerlink" title="Vscode 编辑器代码规范配置方案："></a>Vscode 编辑器代码规范配置方案：</h5><ul>
 <li>更新项目，并重新执行 npm i</li>
 <li>安装 Vscode 插件： editorconfig, Vetur, Eslint, Prettier</li>
-<li>打开项目的设置： Ctrl + , (Mac : Cmd + ,) ，选择工作区设置,打开 setting.json 文件，把下面插件相关的配置拷贝入文件，并保存<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"eslint.validate"</span>: [&#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"html"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"vue"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"javascript"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"javascriptreact"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"editor.formatOnSave"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="string">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">"vetur.validation.template"</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>打开项目的设置： Ctrl + , (Mac : Cmd + ,) ，选择工作区设置,打开 setting.json 文件，把下面插件相关的配置拷贝入文件，并保存<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"eslint.validate"</span>: [&#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"html"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"vue"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"javascript"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">        <span class="string">"language"</span>: <span class="string">"javascriptreact"</span>,</span><br><span class="line">        <span class="string">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="string">"editor.formatOnSave"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="string">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="string">"vetur.validation.template"</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
+<h5 id="env-环境变量和模式"><a href="#env-环境变量和模式" class="headerlink" title="env 环境变量和模式"></a>env 环境变量和模式</h5><p>通过使用 .env / .env[mode] 等文件，增加 mode 功能，可以传入不同 mode 下的对应变量。功能对应 webpack 的 mode 功能。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/" data-id="ck8mp879m0007bas6giv8tddo" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/" data-id="ck8n6fqqx00053ls6yg4e44t8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -169,6 +174,14 @@
       <ul>
         
           <li>
+            <a href="/2020/04/05/project-setup/">project-setup</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/vue-preset/">vue-preset</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/05/npm-pkg/">npm-pkg</a>
           </li>
         
@@ -178,14 +191,6 @@
         
           <li>
             <a href="/2020/04/03/vue-cli-plugin开发/">vue-cli-plugin</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/28/vue-cli3-setup/">vue-cli3-setup</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/29/module/">js中的模块化</a>
           </li>
         
       </ul>
