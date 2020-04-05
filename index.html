@@ -62,6 +62,99 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-npm-pkg" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/05/npm-pkg/" class="article-date">
+  <time datetime="2020-04-05T06:58:15.000Z" itemprop="datePublished">2020-04-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/05/npm-pkg/">npm-pkg</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="npm-发布包的注意事项"><a href="#npm-发布包的注意事项" class="headerlink" title="npm 发布包的注意事项"></a>npm 发布包的注意事项</h2><ul>
+<li><p>scope 创建，需要在npm官网先新建一个 scope，然后在 pkg 的 package.json 中的 name 属性中添加 scope，就可以发布到对应的 scope 下了。</p>
+</li>
+<li><p>publish</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm publish --access public // 将权限公开</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unpublish</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm unpublish packagename --force</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://tracy-chang.github.io/2020/04/05/npm-pkg/" data-id="ck8mp879i0003bas6e7rd0p1d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-node-cli" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/04/node-cli/" class="article-date">
+  <time datetime="2020-04-04T07:48:29.000Z" itemprop="datePublished">2020-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/04/node-cli/">node-cli</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="node-命令行工具开发"><a href="#node-命令行工具开发" class="headerlink" title="node 命令行工具开发"></a>node 命令行工具开发</h2><h5 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h5><ul>
+<li>命令行中命令的使用方法：一个命令会从 $PATH 的路径中查找，找到就执行对应的文件内容，没有找到报空。</li>
+<li>npm 安装包，会从 package.json 中，读取 bin 字段下的命令以及文件内容，复制到对应的路径下，一般是 /usr/local/bin/。这样，执行命令的时候，就会查找这个路径下的文件，并执行。</li>
+<li>#!/usr/bin/env node 用node环境执行代码。</li>
+</ul>
+<h5 id="配合命令行工具的命令，将命令链接到npm包的对应-js-文件，并执行文件代码。"><a href="#配合命令行工具的命令，将命令链接到npm包的对应-js-文件，并执行文件代码。" class="headerlink" title="配合命令行工具的命令，将命令链接到npm包的对应 js 文件，并执行文件代码。"></a>配合命令行工具的命令，将命令链接到npm包的对应 js 文件，并执行文件代码。</h5><ul>
+<li>像 vue 一样，创建项目，run server，等等。</li>
+<li>像 yarn 一样，安装项目依赖。</li>
+<li>像 npm 一样，做各种事情。</li>
+<li>想 webpack 一样，控制项目流程。</li>
+<li>也可以根据业务流程，更改系统配置，做一切 node 可以做的事情</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://tracy-chang.github.io/2020/04/04/node-cli/" data-id="ck8mp879j0004bas6l6xl81x7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-vue-cli-plugin开发" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/03/vue-cli-plugin开发/" class="article-date">
@@ -95,15 +188,17 @@
 <h5 id="Generator"><a href="#Generator" class="headerlink" title="Generator"></a>Generator</h5><ul>
 <li>generator 可以向 package.json 注入额外的依赖或字段。可用于通过 preset 生成项目的时候。</li>
 <li>也可以向项目中添加文件。可用于，往项目中添加固定的模板代码的时候。</li>
+<li>template 渲染方式，EJS <a href="https://github.com/mde/ejs" target="_blank" rel="noopener">https://github.com/mde/ejs</a></li>
 </ul>
 <h5 id="Prompts"><a href="#Prompts" class="headerlink" title="Prompts"></a>Prompts</h5><ul>
 <li>插件的对话框，可以提供参数的添加。这些参数会作为选项被传递给插件的 generator。</li>
+<li>对话框的开发方式，<a href="https://github.com/SBoudrias/Inquirer.js" target="_blank" rel="noopener">https://github.com/SBoudrias/Inquirer.js</a></li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2020/04/03/vue-cli-plugin开发/" data-id="ck8kayl9k00058as6ji9t0bo1" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2020/04/03/vue-cli-plugin开发/" data-id="ck8mp879l0006bas6oobiq1pf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,7 +255,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/" data-id="ck8kayl9j00048as64dhfznvv" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2020/03/28/vue-cli3-setup/" data-id="ck8mp879m0007bas6giv8tddo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -203,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2019/11/29/module/" data-id="ck8kayl9h00038as61l4gkfwh" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2019/11/29/module/" data-id="ck8mp879h0002bas6umegfpbq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -240,7 +335,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2019/11/03/finance-init/" data-id="ck8kayl9900008as6uo2a7mp7" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2019/11/03/finance-init/" data-id="ck8mp879a0000bas6cwtyr6ye" class="article-share-link">Share</a>
       
       
     </footer>
@@ -277,7 +372,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2019/11/03/vue cli2 2 vue cli3/" data-id="ck8kayl9e00018as6inz6na1r" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2019/11/03/vue cli2 2 vue cli3/" data-id="ck8mp879k0005bas67tgh2dhd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -318,7 +413,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2019/09/15/first/" data-id="ck8kayl9g00028as6upiyzffu" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2019/09/15/first/" data-id="ck8mp879f0001bas622pwquys" class="article-share-link">Share</a>
       
       
     </footer>
@@ -359,6 +454,14 @@
       <ul>
         
           <li>
+            <a href="/2020/04/05/npm-pkg/">npm-pkg</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/04/node-cli/">node-cli</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/03/vue-cli-plugin开发/">vue-cli-plugin</a>
           </li>
         
@@ -368,14 +471,6 @@
         
           <li>
             <a href="/2019/11/29/module/">js中的模块化</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/03/finance-init/">经济方面的知道初探</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/03/vue cli2 2 vue cli3/">从 vue cli2 到 vue cli3</a>
           </li>
         
       </ul>
