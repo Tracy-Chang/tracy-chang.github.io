@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="翠西的bolg">
 <meta property="og:description" content="这一点与 CommonJS 规范完全不同。CommonJS 模块输出的是值的缓存，不存在动态更新，详见下文《Module 的加载实现》一节。 CommonJS 运行时加载, es6 module 编译时加载  import后面的from指定模块文件的位置，可以是相对路径，也可以是绝对路径，.js后缀可以省略。如果只是模块名，不带有路径，那么必须有配置文件，告诉 JavaScript 引擎该模块的位">
 <meta property="og:locale" content="cn">
-<meta property="og:updated_time" content="2020-03-28T10:24:34.539Z">
+<meta property="og:updated_time" content="2020-04-25T09:14:26.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js中的模块化">
 <meta name="twitter:description" content="这一点与 CommonJS 规范完全不同。CommonJS 模块输出的是值的缓存，不存在动态更新，详见下文《Module 的加载实现》一节。 CommonJS 运行时加载, es6 module 编译时加载  import后面的from指定模块文件的位置，可以是相对路径，也可以是绝对路径，.js后缀可以省略。如果只是模块名，不带有路径，那么必须有配置文件，告诉 JavaScript 引擎该模块的位">
@@ -92,12 +92,12 @@
 <p>import语句是 Singleton 模式</p>
 <p>export和export default的区别</p>
 <p>1.export：<br>   -直接输出（variable, function, class）,或者用大括号{}输出<br>   -存在动态更新，CommonJS不存在动态更新<br>   -可以在任何位置，只是需要在顶层<br>2.import:（静态执行）<br>   -引入的variable是只读的，引入对象可以改变，不建议更改<br>   -由于import是静态执行，所以不能使用表达式和变量<br>   -import命令具有提升效果<br>3.export default:(用来解决，import的时候，不用知道export的具体名字的)<br>   -import不需要大括号{},<br>   -不可以直接输出var定义方式<br>4.ES6 模块与 CommonJS 模块的差异：<br>   -CommonJS 模块输出的是一个值的拷贝，ES6 模块输出的是值的引用。<br>   -CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。</p>
-<p>   <a href="https://github.com/SunshowerC/blog/issues/8" target="_blank" rel="noopener">https://github.com/SunshowerC/blog/issues/8</a></p>
+<p>参考链接：<br>webpack模块：<a href="https://github.com/SunshowerC/blog/issues/8" target="_blank" rel="noopener">https://github.com/SunshowerC/blog/issues/8</a><br>模块进化史：<a href="https://zhaoda.net/webpack-handbook/module-system.html" target="_blank" rel="noopener">https://zhaoda.net/webpack-handbook/module-system.html</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://tracy-chang.github.io/2019/11/29/module/" data-id="ck8u2rqyl0003pis6wch3ljsx" class="article-share-link">Share</a>
+      <a data-url="https://tracy-chang.github.io/2019/11/29/module/" data-id="ck9uy6ncf0003kds6pcsffdbe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -155,6 +155,10 @@
       <ul>
         
           <li>
+            <a href="/2020/04/25/shell/">shell</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/09/测试/">测试</a>
           </li>
         
@@ -168,10 +172,6 @@
         
           <li>
             <a href="/2020/04/05/vue-preset/">vue-preset</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/05/npm-pkg/">npm-pkg</a>
           </li>
         
       </ul>

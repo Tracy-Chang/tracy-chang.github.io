@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>shell | 翠西的bolg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Shell 是一个应用程序 Shell 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。 Shell 还能连接其它程序  Shell 是一种脚本语言 Shell 并不是简单的堆砌命令，我们还可以在 Shell 中编程。站在这个角度讲，Shell 也是一种编程语言，它的编译器（解释器）是 Shell 这个程序。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell">
+<meta property="og:url" content="https://tracy-chang.github.io/2020/04/25/shell/index.html">
+<meta property="og:site_name" content="翠西的bolg">
+<meta property="og:description" content="Shell 是一个应用程序 Shell 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。 Shell 还能连接其它程序  Shell 是一种脚本语言 Shell 并不是简单的堆砌命令，我们还可以在 Shell 中编程。站在这个角度讲，Shell 也是一种编程语言，它的编译器（解释器）是 Shell 这个程序。">
+<meta property="og:locale" content="cn">
+<meta property="og:updated_time" content="2020-04-25T09:13:07.125Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="shell">
+<meta name="twitter:description" content="Shell 是一个应用程序 Shell 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。 Shell 还能连接其它程序  Shell 是一种脚本语言 Shell 并不是简单的堆砌命令，我们还可以在 Shell 中编程。站在这个角度讲，Shell 也是一种编程语言，它的编译器（解释器）是 Shell 这个程序。">
+  
+    <link rel="alternate" href="/atom.xml" title="翠西的bolg" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">翠西的bolg</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://tracy-chang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-shell" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/25/shell/" class="article-date">
+  <time datetime="2020-04-25T07:09:53.000Z" itemprop="datePublished">2020-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      shell
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Shell-是一个应用程序"><a href="#Shell-是一个应用程序" class="headerlink" title="Shell 是一个应用程序"></a>Shell 是一个应用程序</h3><ul>
+<li>Shell 是一个应用程序，它连接了用户和 Linux 内核，让用户能够更加高效、安全、低成本地使用 Linux 内核，这就是 Shell 的本质。</li>
+<li>Shell 还能连接其它程序</li>
+</ul>
+<h3 id="Shell-是一种脚本语言"><a href="#Shell-是一种脚本语言" class="headerlink" title="Shell 是一种脚本语言"></a>Shell 是一种脚本语言</h3><ul>
+<li>Shell 并不是简单的堆砌命令，我们还可以在 Shell 中编程。站在这个角度讲，Shell 也是一种编程语言，它的编译器（解释器）是 Shell 这个程序。</li>
+</ul>
+<blockquote>
+<p>我们平时所说的 Shell，有时候是指连接用户和内核的这个程序，有时候又是指 Shell 编程。</p>
+</blockquote>
+<h3 id="最常用的shell"><a href="#最常用的shell" class="headerlink" title="最常用的shell"></a>最常用的shell</h3><p>在Linux 和 UNIX系统里可以使用多种不同的shell可以使用。最常用的几种是 Bourne shell (sh), C shell (csh), 和 Korn shell (ksh)。三种shell 都有它们的优点和缺点。Bourne shell 的作者是 Steven Bourne。它是 UNIX 最初使用的shell 并且在每种 UNIX 上都可以使用。Bourne shell 在 shell 编程方面相当优秀，但在处理与用户的交互方面作得不如其他几种 shell。</p>
+<p>C shell 由 Bill Joy 所写，它更多的考虑了用户界面的友好性。它支持象命令补齐（command-line completion）等一些 Bourne shell 所不支持的特性。普遍认为C shell 的编程接口做的不如 Bourne shell, 但 C shell 被很多 C  程序员使用因为 C shell的语法和 C语言的很相似，这也是C shell名称的由来。</p>
+<p>Korn shell (ksh) 由 Dave Korn 所写。它集合了C shell 和 Bourne shell 的优点并且和 Bourne shell 完全兼容。</p>
+<p>除了这些 shell 以外，许多其他的 shell 程序吸收了这些原来的 shell 程序的优点而成为新的 shell 。在 Linux 上常见的有 tcsh (csh 的扩展)，Bourne Again shell(bash, sh 的扩展), 和Public Domain Korn shell (pdksh, ksh 的扩展)。bash 是大多数Linux 系统的缺省 shell。</p>
+<h3 id="The-Bourne-Again-Shell"><a href="#The-Bourne-Again-Shell" class="headerlink" title="The Bourne Again Shell"></a>The Bourne Again Shell</h3><p>Bourne Again shell (bash), 正如它的名字所暗示的，是 Bourne shell 的扩展。bash 与 Bourne shell 完全向后兼容，并且在 Bourne shell 的基础上增加和增强了很多特性。bash 也包含了很多 C 和 Korn shell 里的优点。bash 有很灵活和强大的编程接口，同时又有很友好的用户界面。</p>
+<p>为什么要用 bash 来代替 sh 呢？Bourne shell 最大的缺点在于它处理用户的输入方面。在 Bourne shell 里键入命令会很麻烦，尤其当你键入很多相似的命令时。而 bash 准备了几种特性使命令的输入变得更容易。</p>
+<h3 id="shell-选择"><a href="#shell-选择" class="headerlink" title="shell 选择"></a>shell 选择</h3><p>zsh、oh-my-zsh</p>
+<p>查看系统当前使用的shell</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> echo $SHELL </span><br><span class="line">/bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>查看系统是否安装了zsh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> cat /etc/shells </span><br><span class="line">/bin/sh</span><br><span class="line">/bin/bash</span><br><span class="line">/sbin/nologin</span><br><span class="line">/usr/bin/sh</span><br><span class="line">/usr/bin/bash</span><br><span class="line">/usr/sbin/nologin</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/csh</span><br></pre></td></tr></table></figure>
+
+<p>切换shell为zsh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> chsh -s /bin/zsh</span><br><span class="line">Changing shell for root.</span><br><span class="line">Shell changed.</span><br></pre></td></tr></table></figure>
+
+<p>参考链接：<br>shell: <a href="http://c.biancheng.net/view/706.html" target="_blank" rel="noopener">http://c.biancheng.net/view/706.html</a><br>bash: <a href="https://blog.csdn.net/wenlifu71022/article/details/4069929" target="_blank" rel="noopener">https://blog.csdn.net/wenlifu71022/article/details/4069929</a><br>shell选择：<a href="https://www.jianshu.com/p/d194d29e488c" target="_blank" rel="noopener">https://www.jianshu.com/p/d194d29e488c</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://tracy-chang.github.io/2020/04/25/shell/" data-id="ck9uy6ncj0007kds659nbb7p6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/09/测试/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">测试</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/25/shell/">shell</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/09/测试/">测试</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/06/Git-Commit-Message/">Git-Commit-Message</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/project-setup/">project-setup</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/vue-preset/">vue-preset</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Tracy<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
